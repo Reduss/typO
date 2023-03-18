@@ -1,0 +1,75 @@
+:root{
+    --background-color: #364958;
+    --words-container-backbround: #55828b;
+    --font-color: #93a6b3;
+    --letter-correct-color: #60bb8f;
+    --letter-incorrect-color: #892b64;
+    --cursor-color: #36495875;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--font-color);
+}
+
+body{
+    background-color: var(--background-color);
+}   
+
+#words-container, .container{
+    padding: 2rem;
+    margin: 3rem auto 0 auto;
+    min-width: 10vmin;
+    min-height: 10vmin;
+    max-width: 60vw;
+    background-color: var(--words-container-backbround);
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+}
+
+.word{
+    text-align: center;
+    display: flex;
+}
+
+.letter{
+    display: inline-block;
+}
+
+.letter-correct{
+    color: var(--letter-correct-color);
+}
+
+.letter-incorrect{
+    color: var(--letter-incorrect-color);
+}
+
+#current-letter{
+    position:relative;
+    height: 100%;
+}
+
+#current-letter::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 2px;
+    border-radius: 1rem;
+    background-color: var(--cursor-color);
+}
+
+button{
+    display: block;
+    width: 5rem;
+    height: 3rem;
+    margin: 0 auto;
+}
